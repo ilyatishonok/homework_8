@@ -64,7 +64,7 @@ export default class ArticlesContainer extends Component<ArticlesContainerProps,
 
     public onTabChange = (tabId: string) : void => {
         const { tabs } = this.props;
-        const { source, defaultErrorMessage } = config;
+        const { defaultErrorMessage } = config;
 
         this.setState({
             activeTab: tabId,
@@ -76,7 +76,10 @@ export default class ArticlesContainer extends Component<ArticlesContainerProps,
         const query: string = tab ? tab.title : config.defaultQuery;
         const page = Math.floor((Math.random() * 50) + 1);
 
-        api<{ articles: ArticleInterface[]; }>(`${source}?page=${page}&apiKey=${process.env.API_KEY}&q=${query}`)
+        const apiKey: string | undefined = process.env.REACT_APP_API_KEY;
+        const apiSource: string | undefined = process.env.REACT_APP_API_URL;
+
+        api<{ articles: ArticleInterface[]; }>(`${apiSource}?page=${page}&apiKey=${apiKey}&q=${query}`)
             .then((data): void => {
                 this.setState({
                     isFetching: false,

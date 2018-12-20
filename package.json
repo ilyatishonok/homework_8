@@ -1,7 +1,7 @@
 {
   "name": "homework_8",
   "version": "0.1.0",
-  "homepage": "https://ilyatishonok.github.io/homework_8",
+  "homepage": "https://ilyatishonok.github.io/homework_8/",
   "private": true,
   "dependencies": {
     "@types/jest": "^23.3.10",
@@ -19,7 +19,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,7 +32,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "dotenv": "^6.2.0",
     "gh-pages": "^2.0.1"
   }
 }
