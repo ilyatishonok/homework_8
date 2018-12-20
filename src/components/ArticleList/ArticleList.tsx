@@ -3,11 +3,11 @@ import Article from './Article';
 import { ArticleInterface } from '../../types';
 import config from '../../constants/config';
 
-interface ArticleListPropTypes {
+export interface ArticleListPropTypes {
     articles: ArticleInterface[];
 }
 
-const ArticleList: React.StatelessComponent<ArticleListPropTypes> = ({ articles }) => {
+const ArticleList: React.SFC<ArticleListPropTypes> = ({ articles }) => {
     return (
         <React.Fragment>
             {articles.map((article: ArticleInterface): ReactNode => ( 

@@ -43,14 +43,14 @@ const HighLight = styled.b`
     color: #491253;
 `;
 
-interface ArticlesContainerState {
+export interface ArticlesContainerState {
     activeTab: string;
     articles: ArticleInterface[];
     isFetching: boolean;
     error: string;
 }
 
-interface ArticlesContainerProps {
+export interface ArticlesContainerProps {
     tabs: TabInterface[];
 }
 

@@ -11,7 +11,7 @@ const TabsContainer = styled.div`
     box-shadow: 0 0 10px black;
 `;
 
-interface TabsProps {
+export interface TabsProps {
     tabs: Array<TabInterface>;
     activeTab: string;
     onTabChange: (tabId: string) => void;

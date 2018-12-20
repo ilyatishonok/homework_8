@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React, { Component, ReactNode } from 'react';
 import TabButton from './TabButton';
 
-interface TabPropTypes {
+export interface TabPropTypes {
     title: string;
     onTabChange: (tabId: string) => void,
     selected: boolean;
@@ -10,7 +9,7 @@ interface TabPropTypes {
 }
 
 export default class Tab extends Component<TabPropTypes> {
-    private onTabClick = () : void => {
+    private onTabClick = (): void => {
         const { selected, onTabChange, id } = this.props;
 
         if (!selected) {
@@ -18,7 +17,7 @@ export default class Tab extends Component<TabPropTypes> {
         }
     }
 
-    public render(): JSX.Element {
+    public render(): ReactNode {
         const { title, selected } = this.props;
 
         return (

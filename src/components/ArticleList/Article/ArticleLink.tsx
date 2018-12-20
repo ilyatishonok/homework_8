@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-interface ArticleLinkProps{
+export interface ArticleLinkProps{
     urlToImage: string;
 }
 

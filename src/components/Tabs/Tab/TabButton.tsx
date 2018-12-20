@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-interface TabButtonProps {
+export interface TabButtonProps {
     selected: boolean;
 }
 

@@ -21,7 +21,7 @@ const ArticleDescription = styled.div`
     margin: 0px;
 `;
 
-interface ArticleProps {
+export interface ArticleProps {
     title: string;
     urlToImage: string;
     description: string;
